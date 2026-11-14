@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="Afran Tamim — Professional Video Editor & Motion Graphics Creative.">
+<title>AFRAN TAMIM — Creative Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--bg:#050914;--panel:#0b1424;--panel2:#0e1a2d;--text:#eef5ff;--muted:#8d9bb2;--blue:#4d9dff;--cyan:#68e5ff;--line:rgba(150,190,255,.14);--mx:50vw;--my:50vh}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:-8%;pointer-events:none;z-index:-3;background:radial-gradient(ellipse at 12% 12%,rgba(35,111,224,.30),transparent 34%),radial-gradient(ellipse at 88% 48%,rgba(0,180,220,.17),transparent 32%),radial-gradient(ellipse at 48% 100%,rgba(35,82,168,.16),transparent 42%),linear-gradient(145deg,#040812,#07152a 52%,#030711);animation:ambientDrift 24s ease-in-out infinite alternate}
+@keyframes ambientDrift{to{transform:translate3d(1.2%,-1%,0) scale(1.035);filter:saturate(1.12)}}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.18;background-image:radial-gradient(#c8e4ff 0.7px,transparent .8px);background-size:73px 73px;mask-image:linear-gradient(to bottom,black,transparent 92%)}
+a{color:inherit;text-decoration:none}button{font:inherit}.noise{position:fixed;inset:0;pointer-events:none;z-index:10;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E")}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none}.cursor-glow{position:fixed;left:var(--mx);top:var(--my);width:360px;height:360px;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(44,128,255,.10),transparent 68%);transition:opacity .3s}
+.nav-wrap{position:fixed;z-index:20;top:22px;left:50%;transform:translateX(-50%);width:min(98%,1180px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;padding:10px 13px 10px 19px;border:1px solid rgba(166,202,255,.19);border-radius:99px;background:rgba(7,15,29,.72);backdrop-filter:blur(20px);box-shadow:0 12px 45px rgba(0,0,0,.24)}.brand{font-size:11px;font-weight:700;letter-spacing:.13em;white-space:nowrap;flex:0 0 auto}.brand b{color:var(--cyan)}.nav-links{display:flex;gap:2px;align-items:center;justify-content:center;flex:1;min-width:0;white-space:nowrap}.nav-links a{font-size:10px;font-weight:500;color:#aab9ce;padding:9px 8px;border-radius:30px;transition:.25s;white-space:nowrap}.nav-links a:hover,.nav-links a.active{color:white;background:rgba(77,157,255,.15)}.nav-cta{font-size:10px;font-weight:600;letter-spacing:.06em;padding:10px 13px;flex:0 0 auto;white-space:nowrap;border-radius:30px;background:linear-gradient(110deg,#2875ed,#46c5ee);color:white;box-shadow:0 5px 22px #2479e955}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:22px}
+section{position:relative;padding:120px max(6vw,24px);max-width:1440px;margin:auto}.hero{min-height:100vh;padding-top:145px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:4vw;overflow:visible}.eyebrow{font:11px 'DM Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}h1{font-size:clamp(48px,7.6vw,106px);line-height:.94;letter-spacing:-.075em;margin:23px 0 19px;font-weight:800}.gradient{background:linear-gradient(100deg,#f4f8ff 10%,#75baff 52%,#67eaff 95%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero h2{font-size:clamp(16px,2vw,22px);font-weight:600;color:#c5d8f2;margin:0 0 18px}.hero p{max-width:510px;color:var(--muted);font-size:14px;line-height:1.9}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}.btn{border:1px solid var(--line);padding:13px 19px;border-radius:9px;font-size:11px;font-weight:800;letter-spacing:.07em;display:inline-flex;align-items:center;gap:10px;transition:transform .25s,box-shadow .25s,background .25s}.btn.primary{background:linear-gradient(110deg,#2677f4,#43bde8);border-color:transparent;box-shadow:0 8px 28px #2479ed44}.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px #237ce544}.btn.secondary{background:rgba(255,255,255,.035)}.socials{display:flex;gap:17px;margin-top:29px;color:#8296b2;font:10px 'DM Mono',monospace}.socials a:hover{color:var(--cyan)}
+.hero-visual{height:570px;position:relative;display:grid;place-items:center;perspective:1100px}.orb{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(34,112,227,.17),rgba(23,88,169,.06) 42%,transparent 70%);filter:blur(6px);animation:orb 8s ease-in-out infinite}.ring{position:absolute;width:450px;height:450px;border:1px solid rgba(94,171,255,.12);border-radius:50%;transform:rotateX(68deg);animation:ring 22s linear infinite}.ring:after{content:"";position:absolute;top:4%;left:17%;width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px 5px #4bc9ff}
+@keyframes orb{50%{transform:scale(1.12);opacity:.7}}@keyframes ring{to{transform:rotateX(68deg) rotateZ(360deg)}}
+.hanging-rig{position:absolute;top:2px;left:50%;width:340px;height:540px;transform:translateX(-50%);transform-origin:50% 0;animation:none;filter:drop-shadow(0 35px 34px rgba(0,0,0,.55));will-change:transform}.cord{position:absolute;top:0;left:50%;width:2px;height:116px;transform:translateX(-50%);background:linear-gradient(90deg,#263a55,#a8c5e7 48%,#273c59);box-shadow:0 0 8px #55bfff55}.cord:before{content:"";position:absolute;top:0;left:-3px;width:8px;height:9px;border-radius:3px;background:linear-gradient(90deg,#9bb4d1,#334b69)}.clip{position:absolute;top:108px;left:50%;transform:translateX(-50%);width:35px;height:24px;border:2px solid #9eb7d5;border-radius:7px 7px 10px 10px;background:linear-gradient(120deg,#1c2e48,#607c9c);box-shadow:0 4px 12px #0008}.clip:after{content:"";position:absolute;left:11px;top:-9px;width:9px;height:12px;border:2px solid #9eb7d5;border-bottom:0;border-radius:7px 7px 0 0}
+.id-card{position:absolute;top:128px;left:50%;width:270px;height:365px;transform:translateX(-50%) rotateY(-8deg) rotateX(3deg);transform-style:preserve-3d;border:1px solid rgba(165,210,255,.5);border-radius:17px;padding:10px;background:linear-gradient(145deg,rgba(28,49,77,.97),rgba(5,13,27,.98) 58%,rgba(13,39,67,.97));box-shadow:inset 0 1px 0 #ffffff25,0 0 35px #2e9cff28;overflow:hidden}.id-card:before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,transparent 20%,rgba(112,204,255,.15) 45%,transparent 60%);transform:translateX(-120%);animation:shine 7s ease-in-out infinite}.id-top{height:28px;display:flex;justify-content:space-between;align-items:center;padding:0 8px;color:#b8d9ff;font:9px 'DM Mono',monospace;letter-spacing:.14em}.id-photo{height:205px;border-radius:10px;overflow:hidden;position:relative;background:#111d2d;border:1px solid #6da9df55}.id-photo img{width:100%;height:100%;object-fit:cover;object-position:center 24%;filter:contrast(1.02) saturate(.86);display:block}.id-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,10,22,.35))}.id-info{padding:15px 9px 5px}.id-name{font-size:21px;font-weight:800;letter-spacing:-.04em}.id-role{font:9px 'DM Mono',monospace;color:var(--cyan);letter-spacing:.12em;margin-top:5px}.id-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:15px;padding:0 9px;color:#8fa7c5;font:8px 'DM Mono',monospace}.id-mark{width:32px;height:32px;border:1px solid #5daeff88;border-radius:50%;display:grid;place-items:center;color:#83dfff;font-size:12px}
+@keyframes idleSwing{0%,100%{transform:translateX(-50%) rotate(-2.8deg)}50%{transform:translateX(-50%) rotate(2.8deg)}}@keyframes shine{0%,60%,100%{transform:translateX(-120%)}78%{transform:translateX(120%)}}
+.visual-label{position:absolute;bottom:28px;right:0;color:#647c9d;font:9px 'DM Mono',monospace;letter-spacing:.16em}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font:9px 'DM Mono',monospace;letter-spacing:.2em;color:#647c9d;display:flex;align-items:center;gap:10px}.scroll-cue:after{content:"";width:35px;height:1px;background:linear-gradient(90deg,var(--blue),transparent)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px}.section-head h2{font-size:clamp(34px,5vw,58px);letter-spacing:-.06em;margin:13px 0 0}.section-head p{max-width:390px;color:var(--muted);font-size:13px;line-height:1.8}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:center}.about-frame{height:430px;position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#152945,#08101d)}.about-frame img{width:100%;height:100%;object-fit:cover;object-position:center 23%;filter:saturate(.78);mask-image:linear-gradient(to bottom,black 70%,transparent)}.about-frame:after{content:"AT / 001";position:absolute;bottom:18px;left:20px;font:10px 'DM Mono';color:#c9e4ff;letter-spacing:.15em}.about-copy h3{font-size:clamp(25px,3vw,38px);line-height:1.2;letter-spacing:-.05em;margin:0 0 20px}.about-copy p{color:var(--muted);font-size:14px;line-height:1.95}.stat-row{display:flex;gap:34px;margin-top:30px;flex-wrap:wrap}.stat strong{display:block;font-size:25px;color:#dff3ff}.stat span{font:9px 'DM Mono';color:#7890ae;letter-spacing:.1em}
+.portfolio{padding-top:100px}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:-17px 0 25px}.filter{border:1px solid var(--line);background:transparent;color:#8ea3bf;padding:9px 14px;border-radius:30px;font:10px 'DM Mono';cursor:pointer}.filter.active,.filter:hover{background:#1b4e8b66;color:white;border-color:#4e9eea88}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.project{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:linear-gradient(145deg,#101d31,#09111f);transition:.35s;position:relative}.project:hover{transform:translateY(-8px);border-color:#65baff77;box-shadow:0 18px 45px #0006}.project-art{height:205px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 25%,#22558b,#0a172b 52%,#060b14)}.project-art:before{content:"";position:absolute;width:210px;height:210px;border:1px solid #8ccaff35;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 25px #64baff08,0 0 0 55px #64baff06}.project-art .art-type{position:absolute;left:20px;top:18px;font:9px 'DM Mono';letter-spacing:.16em;color:#9bdcff}.project-art .art-title{position:absolute;left:20px;bottom:22px;font-size:27px;font-weight:800;letter-spacing:-.06em}.project-art .art-no{position:absolute;right:18px;bottom:18px;color:#84a8ce;font:10px 'DM Mono'}.project:nth-child(2) .project-art{background:radial-gradient(circle at 65% 30%,#174f62,#0a1728 55%,#060b14)}.project:nth-child(3) .project-art{background:radial-gradient(circle at 65% 30%,#37305f,#0a1728 55%,#060b14)}.project-info{padding:17px 18px 19px}.project-info h3{font-size:15px;margin:0 0 7px}.project-info p{font-size:11px;color:var(--muted);line-height:1.7;margin:0}.project-meta{display:flex;justify-content:space-between;margin-top:15px;color:#7d9bbc;font:9px 'DM Mono';letter-spacing:.08em}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{padding:25px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,#101e32aa,#09111d99);min-height:190px;transition:.3s}.skill:hover{border-color:#54aaff66;transform:translateY(-5px)}.skill-icon{width:39px;height:39px;border:1px solid #55a9ff66;border-radius:11px;display:grid;place-items:center;color:var(--cyan);font-size:17px;margin-bottom:24px}.skill h3{font-size:16px;margin:0 0 8px}.skill p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.toolkit{display:flex;flex-wrap:wrap;gap:10px}.tool{padding:13px 17px;border:1px solid var(--line);border-radius:9px;background:#0c1728;color:#b7cce6;font-size:11px}.tool small{color:#6686aa;font:9px 'DM Mono';margin-left:9px}
+.interest-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.detail-page{scroll-margin-top:90px}.ai-answer{white-space:pre-wrap;line-height:1.8;color:#dcecff;border:1px solid var(--line);background:rgba(10,24,43,.82);border-radius:12px;padding:18px;margin-top:15px;min-height:30px}.ai-chat{max-width:850px;margin:auto}.interest{min-height:225px;border:1px solid var(--line);border-radius:15px;padding:27px;position:relative;overflow:hidden;background:linear-gradient(130deg,#101f35,#08111e)}.interest:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-55px;bottom:-80px;background:#267fe51c;filter:blur(10px)}.interest .eyebrow{font-size:9px}.interest h3{font-size:25px;letter-spacing:-.05em;margin:22px 0 9px}.interest p{max-width:420px;color:var(--muted);font-size:12px;line-height:1.8}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:5vw}.contact-links{display:grid;gap:10px;margin-top:25px}.contact-link{padding:15px 17px;border:1px solid var(--line);border-radius:10px;background:#0b1728;display:flex;justify-content:space-between;align-items:center;font-size:12px;transition:.25s}.contact-link:hover{border-color:#5aabff88;transform:translateX(4px)}.contact-link span:last-child{color:var(--cyan)}.contact-form{padding:25px;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,#101d30,#09111e)}.contact-form label{display:block;font:9px 'DM Mono';letter-spacing:.13em;color:#8da8c9;margin:0 0 8px}.contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border:1px solid #29405c;background:#07101d;color:white;border-radius:8px;margin-bottom:16px;outline:none;font:12px Manrope}.contact-form input:focus,.contact-form textarea:focus{border-color:#58aaff}.contact-form textarea{min-height:115px;resize:vertical}
+footer{padding:30px 6vw 42px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#7187a5;font:9px 'DM Mono';letter-spacing:.1em;max-width:1440px;margin:auto}
+.reveal{opacity:0;transform:translateY(35px) scale(.985);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0) scale(1)}.reveal-left{opacity:0;transform:translateX(-35px);transition:1s cubic-bezier(.2,.7,.2,1)}.reveal-left.visible{opacity:1;transform:translateX(0)}
+
+/* V3 FINAL UPDATE: local video showcase, friend circle and elastic-card physics */
+.elastic-cord{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:2}.elastic-cord path{fill:none;stroke-linecap:round}.elastic-cord #cordShadow{stroke:#020711;stroke-width:7;opacity:.6}.elastic-cord #cordPath{stroke:url(#cordGradient);stroke:#8bb7e4;stroke-width:3.2;filter:drop-shadow(0 0 5px #59baff88)}
+.hanging-rig{animation:idleSwing 7.2s ease-in-out infinite;touch-action:pan-y}.id-card{cursor:grab;touch-action:none;user-select:none;z-index:3}.id-card.dragging{cursor:grabbing;box-shadow:inset 0 1px 0 #ffffff25,0 0 48px #2e9cff55}.clip{z-index:4;pointer-events:none}
+.video-showcase{border:1px solid rgba(150,190,255,.18);border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#101d30,#060d18);box-shadow:0 25px 65px #0007}.video-stage{position:relative;background:#02060d;aspect-ratio:16/9}.video-stage video{display:block;width:100%;height:100%;object-fit:contain;background:#02060d}.video-caption{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 23px}.video-caption h3{font-size:18px;margin:0 0 6px}.video-caption p{font-size:12px;color:var(--muted);line-height:1.7;margin:0;max-width:650px}.video-tag{font:9px 'DM Mono';letter-spacing:.14em;color:#9bdcff;border:1px solid #4f9bd655;border-radius:30px;padding:9px 12px;white-space:nowrap}
+.friend-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.friend-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:linear-gradient(150deg,#14243a,#080f1b 70%);padding:13px;transition:transform .38s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;transform-style:preserve-3d}.friend-card:hover{transform:translateY(-9px) rotateX(2deg);border-color:#65baff88;box-shadow:0 24px 48px #0008,0 0 30px #2789e51a}.friend-photo{height:255px;border-radius:11px;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 30%,#273b53,#080d16 70%);display:grid;place-items:center}.friend-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:grayscale(.12) saturate(.78);display:block}.friend-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,8,16,.45));pointer-events:none}.friend-initial{font-size:58px;font-weight:800;letter-spacing:-.08em;color:#b9d9f9;text-shadow:0 0 30px #4d9dff66}.friend-info{padding:17px 5px 5px}.friend-info h3{font-size:17px;letter-spacing:-.035em;margin:0 0 7px}.friend-info p{font:9px 'DM Mono';letter-spacing:.13em;color:#7f9bbd;margin:0 0 15px}.friend-link{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;border:1px solid #4b8bc955;border-radius:8px;background:#10233a;color:#dcecff;font-size:10px;font-weight:800;letter-spacing:.08em;transition:.25s}.friend-link:hover{background:#174477;border-color:#6bbcff}.friend-card:nth-child(2) .friend-photo{background:radial-gradient(circle at 50% 25%,#27313e,#090d14 72%)}.friend-card:nth-child(3) .friend-photo{background:radial-gradient(circle at 50% 25%,#203a51,#080d16 72%)}
+@media(max-width:850px){.friend-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.friend-grid{grid-template-columns:1fr}.friend-photo{height:300px}.video-caption{align-items:flex-start;flex-direction:column}.video-tag{white-space:normal}.nav-links{max-height:70vh;overflow:auto}}
+
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:150px;text-align:center}.hero p{margin-inline:auto}.eyebrow{justify-content:center}.actions,.socials{justify-content:center}.hero-visual{height:520px;margin-top:15px}.scroll-cue{display:none}.about-grid,.contact-grid{grid-template-columns:1fr}.about-frame{max-width:420px;margin:auto;width:100%;height:360px}.project-grid{grid-template-columns:repeat(2,1fr)}.skills-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1050px){.nav-wrap{width:min(96%,760px)}.nav-links{display:none;position:absolute;top:57px;left:0;right:0;flex-direction:column;align-items:stretch;padding:10px;background:rgba(7,15,29,.97);border:1px solid var(--line);border-radius:17px;backdrop-filter:blur(18px);max-height:70vh;overflow:auto}.nav-links.open{display:flex}.nav-links a{text-align:center;font-size:12px}.menu-btn{display:block}.nav-cta{margin-left:auto}}
+@media(max-width:600px){.nav-wrap{top:12px}.nav{padding:10px 14px}.menu-btn{display:block}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:57px;left:0;right:0;flex-direction:column;align-items:stretch;padding:10px;background:rgba(7,15,29,.96);border:1px solid var(--line);border-radius:17px;backdrop-filter:blur(18px)}.nav-links.open{display:flex}.nav-links a{text-align:center}.hero{padding-inline:22px;padding-top:125px;min-height:auto}.hero h1{font-size:clamp(48px,14vw,75px)}.hero-visual{height:480px;transform:scale(.88);margin:-8px -20px 0}.section-head{display:block}.section-head p{margin-top:15px}.project-grid,.skills-grid,.interest-grid{grid-template-columns:1fr}.project-art{height:190px}section{padding:85px 22px}footer{padding:25px 22px;flex-direction:column}.stat-row{gap:20px}.about-frame{height:330px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal,.reveal-left{opacity:1;transform:none}}
+
+/* Isolated portrait-only DOOM-inspired energy transition */
+.doom-frame{position:relative;isolation:isolate;overflow:hidden;cursor:pointer;touch-action:pan-y}
+.doom-frame>img{transition:filter .55s cubic-bezier(.2,.75,.2,1),transform .7s cubic-bezier(.2,.75,.2,1);will-change:filter}
+.doom-frame .doom-overlay{position:absolute;inset:0;z-index:3;overflow:hidden;pointer-events:none;opacity:0;border-radius:inherit;transition:opacity .42s ease;background:radial-gradient(ellipse at 50% 48%,rgba(0,210,255,.16),transparent 58%),linear-gradient(115deg,transparent 25%,rgba(60,190,255,.18) 48%,transparent 65%);mix-blend-mode:screen}
+.doom-frame .doom-overlay:before{content:"";position:absolute;inset:-15%;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(92,222,255,.15) 6px,transparent 7px 12px),linear-gradient(90deg,transparent 0 34%,rgba(65,196,255,.22) 49%,transparent 63%);transform:translateX(-110%) skewX(-12deg);opacity:.85}
+.doom-frame .doom-overlay:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,transparent 34%,rgba(0,0,0,.35) 100%),linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,8,24,.38));box-shadow:inset 0 0 34px rgba(0,194,255,.2)}
+.doom-frame .doom-glitch{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;background:linear-gradient(90deg,transparent 0 42%,rgba(78,222,255,.26) 44% 46%,transparent 48%),linear-gradient(0deg,transparent 0 58%,rgba(31,128,255,.18) 59% 61%,transparent 62%);mix-blend-mode:screen}
+.doom-frame.doom-active>img{filter:brightness(.67) contrast(1.18) saturate(.88) hue-rotate(155deg);transform:scale(1.035)}
+.doom-frame.doom-active .doom-overlay{opacity:1}
+.doom-frame.doom-active .doom-overlay:before{animation:doom-scan 1.25s ease-in-out infinite}
+.doom-frame.doom-active .doom-glitch{opacity:1;animation:doom-glitch .42s steps(2,end) infinite}
+.doom-frame:focus-visible{outline:2px solid #68e5ff;outline-offset:4px}
+@keyframes doom-scan{0%{transform:translateX(-110%) skewX(-12deg)}55%,100%{transform:translateX(110%) skewX(-12deg)}}
+@keyframes doom-glitch{0%{transform:translate(0);clip-path:inset(0 0 82% 0)}25%{transform:translate(2px,-1px);clip-path:inset(35% 0 48% 0)}50%{transform:translate(-2px,1px);clip-path:inset(67% 0 16% 0)}75%{transform:translate(1px,0);clip-path:inset(12% 0 74% 0)}100%{transform:translate(0);clip-path:inset(0 0 82% 0)}}
+@media(prefers-reduced-motion:reduce){.doom-frame>img,.doom-frame .doom-overlay{transition:none}.doom-frame.doom-active .doom-overlay:before,.doom-frame.doom-active .doom-glitch{animation:none}}
+
+
+/* CMS-controlled portrait-only energy effect */
+.doom-frame{position:relative;isolation:isolate;overflow:hidden;cursor:pointer}
+.doom-frame>img{transition:filter .5s ease,transform .65s ease}
+.cms-doom-overlay{position:absolute;inset:0;pointer-events:none;opacity:0;z-index:4;background:radial-gradient(ellipse at 50% 48%,rgba(0,205,255,.18),transparent 60%),repeating-linear-gradient(0deg,transparent 0 6px,rgba(80,205,255,.11) 7px,transparent 8px 13px);mix-blend-mode:screen;transition:opacity .4s ease}
+.cms-doom-active>img{filter:brightness(.7) contrast(1.15) saturate(.85) hue-rotate(150deg);transform:scale(1.025)}
+.cms-doom-active .cms-doom-overlay{opacity:1;animation:cmsEnergy 1.2s ease-in-out infinite alternate}
+@keyframes cmsEnergy{from{background-position:0 0;filter:blur(0)}to{background-position:0 18px;filter:blur(.35px)}}
+.cms-motion-off *, .cms-motion-off *:before, .cms-motion-off *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){.cms-doom-active .cms-doom-overlay{animation:none}}
+
+
+/* Short, occasional whole-page signal glitch; kept subtle and motion-safe. */
+#globalGlitch{position:fixed;inset:0;z-index:99;pointer-events:none;opacity:0;mix-blend-mode:screen;background:linear-gradient(transparent 0 22%,rgba(68,204,255,.14) 22.2% 22.8%,transparent 23.2% 61%,rgba(78,139,255,.14) 61.2% 62%,transparent 62.4%);}
+#globalGlitch:before,#globalGlitch:after{content:"";position:absolute;inset:0;opacity:0;background:linear-gradient(90deg,transparent 0 18%,rgba(83,219,255,.20) 18.2% 18.8%,transparent 19.2% 72%,rgba(66,140,255,.18) 72.2% 72.7%,transparent 73%);}
+body.global-glitch #globalGlitch{opacity:1;animation:globalGlitchFlash .28s steps(2,end) both}
+body.global-glitch #globalGlitch:before{opacity:1;animation:globalGlitchSlice .28s steps(2,end) both}
+body.global-glitch #globalGlitch:after{opacity:.65;animation:globalGlitchSlice2 .22s steps(2,end) both}
+@keyframes globalGlitchFlash{0%{transform:translateX(0);clip-path:inset(0)}35%{transform:translateX(-3px);clip-path:inset(18% 0 68%)}70%{transform:translateX(3px);clip-path:inset(55% 0 25%)}100%{transform:none;clip-path:inset(0)}}
+@keyframes globalGlitchSlice{0%{transform:translateX(-5px)}50%{transform:translateX(6px)}100%{transform:none}}
+@keyframes globalGlitchSlice2{0%{transform:translateY(2px)}100%{transform:translateY(-2px)}}
+.cms-glitch-off #globalGlitch{display:none}
+@media(prefers-reduced-motion:reduce){body:before{animation:none!important}#globalGlitch{display:none!important}}
+.app-card{position:relative;overflow:hidden;border:1px solid rgba(150,190,255,.2);border-radius:16px;padding:22px;background:linear-gradient(145deg,rgba(17,36,62,.88),rgba(7,16,30,.94));box-shadow:0 14px 38px rgba(0,0,0,.2);transition:transform .25s,border-color .25s,box-shadow .25s}.app-card:hover{transform:translateY(-5px);border-color:rgba(104,229,255,.48);box-shadow:0 18px 42px rgba(18,115,210,.16)}.app-logo{width:62px;height:62px;object-fit:contain;border-radius:14px;padding:7px;background:rgba(255,255,255,.06);border:1px solid rgba(150,190,255,.2);margin-bottom:15px}.app-logo-placeholder{width:62px;height:62px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#1c5cae,#087f9d);color:white;font-size:24px;font-weight:800;margin-bottom:15px}
+.ai-status-loading{display:flex;align-items:center;gap:10px;color:#9edfff}.ai-status-loading:before{content:"";width:13px;height:13px;border:2px solid rgba(104,229,255,.25);border-top-color:var(--cyan);border-radius:50%;animation:aiSpin .75s linear infinite;flex:0 0 auto}@keyframes aiSpin{to{transform:rotate(360deg)}}#aiSend:disabled{opacity:.7;cursor:wait}
+
+/* Responsive navigation hardening: prevent the header from exceeding narrow screens. */
+@media (max-width: 1100px) {
+  .nav-wrap { width: min(96%, 760px); left: 50%; }
+  .nav { width: 100%; min-width: 0; gap: 8px; padding: 9px 12px; border-radius: 18px; }
+  .brand { min-width: 0; max-width: calc(100% - 54px); overflow: hidden; text-overflow: ellipsis; font-size: 10px; letter-spacing: .08em; }
+  .menu-btn { display: block; flex: 0 0 38px; width: 38px; min-width: 38px; padding: 6px; }
+  .nav-cta { display: none !important; }
+  .nav-links { display: none; position: absolute; top: calc(100% + 8px); left: 0; right: 0; width: 100%; max-height: min(70vh, 520px); overflow-y: auto; flex-direction: column; align-items: stretch; gap: 3px; padding: 10px; white-space: normal; background: rgba(7,15,29,.98); border: 1px solid var(--line); border-radius: 16px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; width: 100%; text-align: center; font-size: 12px; padding: 11px 10px; }
+}
+@media (max-width: 380px) {
+  .nav-wrap { width: calc(100% - 16px); }
+  .nav { padding-inline: 9px; }
+  .brand { font-size: 9px; letter-spacing: .04em; }
+}
+
+
+/* Responsive navigation fit safeguards — layout only; existing motion is untouched. */
+@media(max-width:1050px){
+  .nav-wrap{max-width:calc(100vw - 16px)}
+  .nav{width:100%;box-sizing:border-box}
+  .nav-links{box-sizing:border-box;width:100%;max-width:100%;left:0;right:0}
+  .nav-links a{max-width:100%;white-space:normal;overflow-wrap:anywhere}
+}
+
+/* Mobile nav fit: constrain the bar and let the menu use the full viewport width. */
+@media (max-width: 1050px) {
+ .nav-wrap { width: calc(100% - 20px); max-width: 760px; left: 50%; }
+ .nav { width: 100%; min-width: 0; gap: 6px; padding-inline: 10px; }
+ .brand { min-width: 0; max-width: calc(100% - 52px); overflow: hidden; text-overflow: ellipsis; }
+ .menu-btn { flex: 0 0 40px; width: 40px; min-width: 40px; padding: 4px; }
+ .nav-links { box-sizing: border-box; width: 100%; max-width: 100%; left: 0; right: 0; }
+ .nav-links a { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+}
+@media (max-width: 380px) {
+ .nav-wrap { width: calc(100% - 12px); }
+ .nav { padding-inline: 7px; }
+ .brand { font-size: 9px; letter-spacing: .025em; }
+}
+/* Mobile nav fit safeguards end. */
+</style>
+</head>
+<body>
+<div class="noise"></div><canvas id="particles"></canvas><div class="cursor-glow"></div><div id="globalGlitch" aria-hidden="true"></div>
+<div class="nav-wrap"><nav class="nav"><a class="brand" href="#home" aria-label="Afran Tamim home"><span class="brand-monogram">AT</span><span><b> /</b> AFRAN TAMIM</span></a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button><div class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#about">About</a><a href="#video-portfolio">Video</a><a href="#portfolio">Portfolio</a><a href="#friends">Friends</a><a href="#gaming">Gaming</a><a href="#anime">Anime</a><a href="#apps">Apps</a><a href="#ai">AI</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#contact">LET'S TALK ↗</a></nav></div>
+<main>
+<section class="hero" id="home">
+ <div class="hero-copy">
+  <div class="eyebrow reveal-left">Independent creative / Bangladesh</div>
+  <h1 class="reveal-left">AFRAN<br><span class="gradient">TAMIM.</span></h1>
+  <h2 class="reveal-left">Professional Video Editor</h2>
+  <p class="reveal-left">I turn ideas into engaging visual stories through thoughtful editing, motion graphics and creative video production. Focused on rhythm, detail and a cinematic finish.</p>
+  <div class="actions reveal-left"><a class="btn primary" href="#portfolio">EXPLORE WORK <span>↗</span></a><a class="btn secondary" href="mailto:mdtamimj679@gmail.com">CONTACT ME <span>✉</span></a></div>
+  <div class="socials reveal-left"><a href="https://www.facebook.com/hm.tamim.223742/" target="_blank" rel="noopener">FACEBOOK ↗</a><a href="https://www.youtube.com/results?search_query=4x+zero" target="_blank" rel="noopener">4X ZERO ↗</a><span>VIDEO / MOTION / STORY</span></div>
+ </div>
+ <div class="hero-visual">
+  <div class="orb"></div><div class="ring"></div>
+  <div class="hanging-rig" id="hangingRig">
+   <svg class="elastic-cord" id="elasticCord" viewBox="0 0 340 540" preserveAspectRatio="none" aria-hidden="true"><path id="cordShadow" d="M170 0 C170 55 170 85 170 128"/><path id="cordPath" d="M170 0 C170 55 170 85 170 128"/></svg><div class="clip" id="cardClip"></div>
+   <div class="id-card" id="idCard">
+    <div class="id-top"><span>CREATIVE IDENTITY</span><span>AT—001</span></div>
+    <div class="id-photo doom-frame" tabindex="0" role="button" aria-label="Toggle cinematic DOOM-inspired portrait effect" aria-pressed="false"><img src="assets/portrait.jpg" alt="Afran Tamim original portrait"></div>
+    <div class="id-info"><div class="id-name">AFRAN TAMIM</div><div class="id-role">PROFESSIONAL VIDEO EDITOR</div></div>
+    <div class="id-bottom"><span>VIDEO EDITING<br>MOTION GRAPHICS</span><span class="id-mark">AT</span></div>
+   </div>
+  </div>
+  <div class="visual-label">DESIGNING MOTION / 2026</div>
+ </div>
+ <div class="scroll-cue">SCROLL TO EXPLORE</div>
+</section>
+<section id="about">
+ <div class="section-head reveal"><div><div class="eyebrow">A little introduction</div><h2>About <span class="gradient">Me.</span></h2></div><p>Creative thinking meets intentional storytelling. Every frame has a purpose.</p></div>
+ <div class="about-grid"><div class="about-frame reveal-left doom-frame" tabindex="0" role="button" aria-label="Toggle cinematic DOOM-inspired portrait effect" aria-pressed="false"><img src="assets/portrait.jpg" alt="Afran Tamim portrait"></div><div class="about-copy reveal"><h3>Making visuals feel<br><span class="gradient">something more.</span></h3><p>I'm Afran Tamim, a video editor with a passion for visual storytelling and motion graphics. I enjoy shaping raw footage into clear, engaging experiences—balancing pacing, sound, composition and detail to give every project its own identity.</p><p>My approach is simple: understand the idea, respect the story, and make every edit feel intentional.</p><div class="stat-row"><div class="stat"><strong>02</strong><span>CORE SKILLS</span></div><div class="stat"><strong>03</strong><span>SERVICE AREAS</span></div><div class="stat"><strong>∞</strong><span>CREATIVE IDEAS</span></div></div></div></div>
+</section>
+
+<section id="video-portfolio" class="portfolio">
+ <div class="section-head reveal"><div><div class="eyebrow">Original work / 01</div><h2>Video Editing <span class="gradient">Portfolio.</span></h2></div><p>Upload your latest video from AFRAN ADMIN. Published videos are delivered from cloud storage rather than the website bundle.</p></div>
+ <div class="video-showcase reveal"><div class="video-stage"><video id="featuredVideo" controls playsinline preload="metadata" poster="assets/images/video-poster.jpg"><source src="" type="video/mp4">Your browser does not support HTML video.</video></div><div class="video-caption"><div><h3>Editing Showcase — Selected Work</h3><p>A sample of my editing and visual presentation work. More real projects can be added to this showcase later.</p></div><span class="video-tag" id="featuredVideoNote">UPLOAD A VIDEO FROM ADMIN</span></div></div>
+</section>
+
+<section class="portfolio" id="portfolio">
+ <div class="section-head reveal"><div><div class="eyebrow">Selected creative work</div><h2>Video Editing <span class="gradient">Portfolio.</span></h2></div><p>A project gallery ready for your real edits, showreels and thumbnails. Replace these visual placeholders whenever your work is ready.</p></div>
+ <div class="filter-row reveal"><button class="filter active" data-filter="all">ALL WORK</button><button class="filter" data-filter="edit">VIDEO EDIT</button><button class="filter" data-filter="motion">MOTION</button><button class="filter" data-filter="creative">CREATIVE</button></div>
+ <div class="project-grid">
+  <a class="project reveal" data-kind="edit" href="#video-edit-details"><div class="project-art"><span class="art-type">01 / VIDEO EDIT</span><div class="art-title">VIDEO<br>EDITING.</div><span class="art-no">OPEN ↗</span></div><div class="project-info"><h3>Video Editing</h3><p>Open the dedicated video editing showcase.</p><div class="project-meta"><span>VIDEO EDITING</span><span>↗ VIEW WORK</span></div></div></a>
+  <a class="project reveal" data-kind="motion" href="#motion-details"><div class="project-art"><span class="art-type">02 / MOTION</span><div class="art-title">MOTION<br>GRAPHICS.</div><span class="art-no">OPEN ↗</span></div><div class="project-info"><h3>Motion Graphics</h3><p>Open the dedicated motion design showcase.</p><div class="project-meta"><span>MOTION DESIGN</span><span>↗ VIEW WORK</span></div></div></a>
+  <a class="project reveal" data-kind="creative" href="#creative-details"><div class="project-art"><span class="art-type">03 / CREATIVE</span><div class="art-title">VISUAL<br>STORY.</div><span class="art-no">OPEN ↗</span></div><div class="project-info"><h3>Creative Production</h3><p>Open the dedicated creative projects showcase.</p><div class="project-meta"><span>PRODUCTION</span><span>↗ VIEW WORK</span></div></div></a>
+ </div>
+</section>
+
+
+<section class="portfolio detail-page" id="video-edit-details"><div class="section-head reveal"><div><div class="eyebrow">Portfolio / Video Editing</div><h2>Video Edit <span class="gradient">Showcase.</span></h2></div><p>Video edits uploaded from the private Admin Panel appear here.</p></div><div class="project-grid" id="videoEditContent"></div></section>
+<section class="portfolio detail-page" id="motion-details"><div class="section-head reveal"><div><div class="eyebrow">Portfolio / Motion Graphics</div><h2>Motion <span class="gradient">Showcase.</span></h2></div><p>Motion graphics, animated titles and experiments uploaded from Admin.</p></div><div class="project-grid" id="motionContent"></div></section>
+<section class="portfolio detail-page" id="creative-details"><div class="section-head reveal"><div><div class="eyebrow">Portfolio / Creative</div><h2>Creative <span class="gradient">Projects.</span></h2></div><p>Additional creative work and visual experiments.</p></div><div class="project-grid" id="creativeContent"></div></section>
+<section class="portfolio" id="gaming"><div class="section-head reveal"><div><div class="eyebrow">Gaming / Free Fire</div><h2>Gaming <span class="gradient">Hub.</span></h2></div><p>Gaming videos, screenshots and useful links managed from Admin.</p></div><div class="project-grid" id="gamingContent"></div></section>
+<section class="portfolio" id="anime"><div class="section-head reveal"><div><div class="eyebrow">Anime / Story Worlds</div><h2>Anime & <span class="gradient">Story.</span></h2></div><p>Anime-related screenshots, original notes and story content managed from Admin.</p></div><div class="project-grid" id="animeContent"></div></section>
+<section id="apps"><div class="section-head reveal"><div><div class="eyebrow">Useful destinations</div><h2>Apps & <span class="gradient">Links.</span></h2></div><p>Quick access to selected tools and platforms.</p></div><div class="skills-grid" id="appsContent"></div></section>
+<section id="ai"><div class="section-head reveal"><div><div class="eyebrow">AI / Assistant</div><h2>Ask <span class="gradient">AI.</span></h2></div><p>Ask a question and receive a response from the Gemini-powered assistant.</p></div><div class="contact-form ai-chat"><label for="aiQuestion">YOUR QUESTION</label><textarea id="aiQuestion" maxlength="2000" placeholder="Type your question..."></textarea><div class="actions"><button class="btn primary" id="aiSend" type="button">ASK GEMINI ↗</button></div><p id="aiStatus" class="video-caption" aria-live="polite">Gemini AI is available to the website owner inside the secure Control Panel.</p><div id="aiAnswer" class="ai-answer" aria-live="polite"></div></div></section>
+
+<section id="friends">
+ <div class="section-head reveal"><div><div class="eyebrow">The people in my circle</div><h2>Friend <span class="gradient">Circle.</span></h2></div><p>A small space for the friends who are part of my world. Each profile links to its corresponding Facebook page.</p></div>
+ <div class="friend-grid">
+  <article class="friend-card reveal"><div class="friend-photo"><img src="assets/friends/khalid-bin-oalid-sam.jpg" alt="Khalid Bin Oalid Sam — user-provided profile image"></div><div class="friend-info"><h3>Khalid Bin Oalid Sam</h3><p>FRIEND CIRCLE / 01</p><a class="friend-link" href="https://www.facebook.com/khalid.bin.oalid.sam" target="_blank" rel="noopener"><span>VISIT PROFILE</span><span>↗</span></a></div></article>
+  <article class="friend-card reveal"><div class="friend-photo"><img src="assets/friends/iftekhar-khalid.jpeg" alt="Iftekhar Khalid — original uploaded photo"></div><div class="friend-info"><h3>Iftekhar Khalid</h3><p>FRIEND CIRCLE / 02</p><a class="friend-link" href="https://www.facebook.com/profile.php?id=61587381485095" target="_blank" rel="noopener"><span>VISIT PROFILE</span><span>↗</span></a></div></article>
+  <article class="friend-card reveal"><div class="friend-photo"><img src="assets/friends/md-tamim-2.jpeg" alt="MD Tamim 2.0 — original uploaded photo"></div><div class="friend-info"><h3>MD Tamim 2.0</h3><p>FRIEND CIRCLE / 03</p><a class="friend-link" href="https://www.facebook.com/md.tamim.hossain.837852" target="_blank" rel="noopener"><span>VISIT PROFILE</span><span>↗</span></a></div></article>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="section-head reveal"><div><div class="eyebrow">What I can create</div><h2>Skills & <span class="gradient">Services.</span></h2></div><p>Focused creative services built around strong visuals and clear communication.</p></div>
+ <div class="skills-grid"><article class="skill reveal"><div class="skill-icon">✂</div><h3>Video Editing</h3><p>Story-driven cuts, pacing, transitions and polished visual flow for digital content.</p></article><article class="skill reveal"><div class="skill-icon">✳</div><h3>Motion Graphics</h3><p>Animated typography, graphic elements and movement that support the story.</p></article><article class="skill reveal"><div class="skill-icon">◈</div><h3>Creative Video Production</h3><p>Visual concept development and thoughtful execution from idea to final delivery.</p></article></div>
+</section>
+<section id="toolkit">
+ <div class="section-head reveal"><div><div class="eyebrow">Creative environment</div><h2>Creative <span class="gradient">Toolkit.</span></h2></div><p>Software and tools can be added here as your confirmed workflow is shared. No unverified software claims.</p></div>
+ <div class="toolkit reveal"><span class="tool">YOUR SOFTWARE <small>ADD TOOL</small></span><span class="tool">EDITING WORKFLOW <small>ADD TOOL</small></span><span class="tool">MOTION WORKFLOW <small>ADD TOOL</small></span><span class="tool">AUDIO / COLOR <small>ADD TOOL</small></span></div>
+</section>
+<section id="interests">
+ <div class="section-head reveal"><div><div class="eyebrow">Beyond the timeline</div><h2>More than <span class="gradient">Editing.</span></h2></div><p>Creative inspiration also comes from the worlds, stories and games I enjoy.</p></div>
+ <div class="interest-grid"><a class="interest reveal" href="#gaming"><div class="eyebrow">01 / Gaming</div><h3>Gaming & Free Fire ↗</h3><p>Open the gaming hub for PC gaming, Free Fire videos, screenshots and links.</p></a><a class="interest reveal" href="#anime"><div class="eyebrow">02 / Story worlds</div><h3>Anime & Storytelling ↗</h3><p>Open the anime and story section for screenshots, notes and related content.</p></a></div>
+</section>
+<section id="contact">
+ <div class="section-head reveal"><div><div class="eyebrow">Have a project in mind?</div><h2>Let's make it <span class="gradient">move.</span></h2></div><p>For creative projects, collaborations or a simple hello, reach out through any of the links below.</p></div>
+ <div class="contact-grid"><div class="reveal-left"><p style="color:var(--muted);font-size:13px;line-height:1.9">Good work starts with a conversation. Tell me what you're imagining and let's explore the possibilities.</p><div class="contact-links"><a class="contact-link" href="mailto:mdtamimj679@gmail.com"><span>Email</span><span>mdtamimj679@gmail.com ↗</span></a><a class="contact-link" href="https://www.facebook.com/hm.tamim.223742/" target="_blank" rel="noopener"><span>Facebook</span><span>VISIT PROFILE ↗</span></a><a class="contact-link" href="https://www.youtube.com/results?search_query=4x+zero" target="_blank" rel="noopener"><span>YouTube / 4X ZERO</span><span>FIND CHANNEL ↗</span></a></div></div>
+ <form class="contact-form reveal" id="contactForm"><label for="name">YOUR NAME</label><input id="name" name="name" placeholder="Your name" required><label for="email">YOUR EMAIL</label><input id="email" name="email" type="email" placeholder="you@example.com" required><label for="message">PROJECT DETAILS</label><textarea id="message" name="message" placeholder="Tell me a little about your idea..." required></textarea><button class="btn primary" type="submit">SEND EMAIL ↗</button></form></div>
+</section>
+</main>
+<footer><span>© 2026 AFRAN TAMIM / CREATIVE PORTFOLIO</span><span>BUILT WITH INTENTION · DESIGNED FOR MOTION</span></footer>
+<script>
+const root=document.documentElement;
+window.addEventListener('pointermove',e=>{root.style.setProperty('--mx',e.clientX+'px');root.style.setProperty('--my',e.clientY+'px')},{passive:true});
+const rig=document.getElementById('hangingRig'),card=document.getElementById('idCard'),clip=document.getElementById('cardClip'),cord=document.getElementById('cordPath'),cordShadow=document.getElementById('cordShadow');
+const stage=document.querySelector('.hero-visual');
+let px=0,py=0,vx=0,vy=0,tx=0,ty=0,dragging=false,pointerId=null,lastX=0,lastY=0,lastT=0,tiltX=0,tiltY=0;
+const anchor={x:170,y:0},rest={x:0,y:128};
+function cordCurve(x,y){const endX=anchor.x+x,endY=rest.y+y;const dx=endX-anchor.x,dy=endY-anchor.y;const bend=Math.max(-70,Math.min(70,dx*.28));const c1x=anchor.x+dx*.18+bend,c1y=anchor.y+dy*.34;const c2x=anchor.x+dx*.82+bend,c2y=anchor.y+dy*.78;const d=`M ${anchor.x} ${anchor.y} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${endX} ${endY}`;cord.setAttribute('d',d);cordShadow.setAttribute('d',d);clip.style.left=`calc(50% + ${x}px)`;clip.style.top=`${endY-20}px`;}
+function setCard(){card.style.top=`${rest.y+py}px`;card.style.left=`calc(50% + ${px}px)`;card.style.transform=`translateX(-50%) rotateY(${-8+tiltY}deg) rotateX(${3+tiltX}deg) rotateZ(${Math.max(-18,Math.min(18,px*.055+vx*.025))}deg)`;cordCurve(px,py);}
+card.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;dragging=true;pointerId=e.pointerId;card.classList.add('dragging');card.setPointerCapture(pointerId);tx=px;ty=py;lastX=e.clientX;lastY=e.clientY;lastT=performance.now();vx=0;vy=0;e.preventDefault()});
+card.addEventListener('pointermove',e=>{if(!dragging||e.pointerId!==pointerId)return;const r=stage.getBoundingClientRect();const scale=340/Math.max(1,r.width*.62);const maxX=Math.max(125,Math.min(260,r.width*.72));const maxY=Math.max(180,r.height-230);const nx=Math.max(-maxX,Math.min(maxX,(e.clientX-lastX)*scale+tx));const ny=Math.max(-90,Math.min(maxY,(e.clientY-lastY)*scale+ty));const now=performance.now(),dt=Math.max(8,now-lastT);vx=(nx-px)/dt*16;vy=(ny-py)/dt*16;px=nx;py=ny;tiltY=Math.max(-22,Math.min(22,nx*.16));tiltX=Math.max(-18,Math.min(18,ny*.08));lastT=now;setCard()});
+function releaseCard(e){if(!dragging)return;if(e&&pointerId!==null&&e.pointerId!==pointerId)return;dragging=false;pointerId=null;card.classList.remove('dragging');vx*=1.05;vy*=1.05}
+card.addEventListener('pointerup',releaseCard);card.addEventListener('pointercancel',releaseCard);card.addEventListener('lostpointercapture',()=>{if(dragging)releaseCard()});
+let prev=performance.now();function springFrame(now){const dt=Math.min(.032,(now-prev)/1000);prev=now;if(!dragging){const k=34,damping=8.2;const ax=-k*px-damping*vx,ay=-k*py-damping*vy;vx+=ax*dt;vy+=(ay)*dt;px+=vx*dt;py+=vy*dt;if(Math.abs(px)<.03&&Math.abs(vx)<.03)px=vx=0;if(Math.abs(py)<.03&&Math.abs(vy)<.03)py=vy=0;tiltX*=.94;tiltY*=.94;setCard()}requestAnimationFrame(springFrame)}setCard();requestAnimationFrame(springFrame);
+const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');let W,H,dots=[];
+function resize(){W=canvas.width=innerWidth*devicePixelRatio;H=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';dots=Array.from({length:Math.min(95,Math.floor(innerWidth/13))},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.3,v:Math.random()*.22+.05,a:Math.random()*.5+.12}))}
+function draw(){ctx.clearRect(0,0,W,H);for(const p of dots){p.y-=p.v*devicePixelRatio;if(p.y<0){p.y=H;p.x=Math.random()*W}ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fillStyle=`rgba(130,190,255,${p.a})`;ctx.fill()}requestAnimationFrame(draw)}resize();addEventListener('resize',resize);draw();
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal,.reveal-left').forEach(el=>observer.observe(el));
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('#portfolio .project[data-kind]').forEach(p=>{p.style.display=f==='all'||p.dataset.kind===f?'':'none'})}));
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');if(menuBtn&&navLinks){menuBtn.setAttribute('aria-expanded','false');menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu')});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Open menu')}));window.addEventListener('resize',()=>{if(window.innerWidth>1100){navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}});}
+const sections=[...document.querySelectorAll('main section[id]')];const navObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});sections.forEach(s=>navObserver.observe(s));
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(e.currentTarget);const subject=encodeURIComponent('Portfolio enquiry from '+fd.get('name'));const body=encodeURIComponent('Name: '+fd.get('name')+'\nEmail: '+fd.get('email')+'\n\n'+fd.get('message'));location.href='mailto:mdtamimj679@gmail.com?subject='+subject+'&body='+body});
+
+// Portrait interaction: hover on desktop, tap/click or keyboard to pin the effect.
+document.querySelectorAll('.doom-frame').forEach(frame=>{
+  const overlay=document.createElement('span'); overlay.className='doom-overlay'; overlay.setAttribute('aria-hidden','true');
+  const glitch=document.createElement('span'); glitch.className='doom-glitch'; glitch.setAttribute('aria-hidden','true');
+  frame.append(overlay,glitch);
+  let pinned=false, hovering=false;
+  const sync=()=>{const active=pinned||hovering;frame.classList.toggle('doom-active',active);frame.setAttribute('aria-pressed',String(pinned));};
+  frame.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){hovering=true;sync();}});
+  frame.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){hovering=false;sync();}});
+  frame.addEventListener('click',()=>{pinned=!pinned;sync();});
+  frame.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pinned=!pinned;sync();}});
+});
+
+
+// Occasional, brief global glitch. Disabled for reduced-motion and CMS preference.
+(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const fire=()=>{if(document.documentElement.classList.contains('cms-glitch-off'))return;document.body.classList.add('global-glitch');setTimeout(()=>document.body.classList.remove('global-glitch'),280)};const schedule=()=>setTimeout(()=>{fire();schedule()},8000+Math.random()*6000);setTimeout(schedule,3000+Math.random()*1800)})();
+// Public visitors are directed to the owner-only Gemini assistant in Admin.
+(function(){
+ const btn=document.getElementById('aiSend'),q=document.getElementById('aiQuestion'),out=document.getElementById('aiAnswer'),st=document.getElementById('aiStatus');
+ if(!btn)return;
+ btn.addEventListener('click',()=>{
+   if(q)q.value='';
+   if(st){st.className='video-caption';st.textContent='Gemini AI is available to the website owner in the secure Control Panel at /admin.html.'}
+   if(out)out.textContent='';
+ });
+})();
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="public-cms.js"></script>
+</body></html>

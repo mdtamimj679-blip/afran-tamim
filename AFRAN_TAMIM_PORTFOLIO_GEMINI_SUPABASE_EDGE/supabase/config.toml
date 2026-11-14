@@ -1,0 +1,3 @@
+# Edge Function authentication is enforced by the Supabase gateway.
+[functions.gemini-ai]
+verify_jwt = true

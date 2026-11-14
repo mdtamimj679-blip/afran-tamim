@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>AFRAN ADMIN — Private CMS</title>
+<style>
+:root{color-scheme:dark;--bg:#050914;--panel:#0b1424;--panel2:#101e32;--line:#233651;--txt:#eef5ff;--muted:#91a3bd;--blue:#4d9dff;--cyan:#68e5ff;--danger:#ff647c}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#10294b 0,transparent 40%),var(--bg);color:var(--txt);font:15px/1.5 system-ui,Segoe UI,sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer;border:1px solid #315078;background:#142b48;color:var(--txt);padding:10px 14px;border-radius:10px}button.primary{background:linear-gradient(110deg,#1679db,#087f9d);border:0}button.danger{border-color:#773545;color:#ff9aaa}button:disabled{opacity:.45;cursor:not-allowed}
+.wrap{max-width:1250px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:22px}.brand{font-weight:900;letter-spacing:.14em}.brand span{color:var(--cyan)}.muted{color:var(--muted)}.panel{background:linear-gradient(145deg,#0c1829,#08111f);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 20px 70px #0005}.login{max-width:430px;margin:10vh auto}.grid{display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px}.side{display:flex;flex-direction:column;gap:8px;height:max-content;position:sticky;top:16px}.side button{text-align:left;background:transparent;border-color:transparent;color:var(--muted)}.side button.active,.side button:hover{background:#132945;color:var(--txt);border-color:#244567}.content{min-width:0}.hidden{display:none!important}.field{display:grid;gap:6px;margin:0 0 14px}.field label{font-size:13px;color:#b8c8dc}.field input,.field textarea,.field select{width:100%;background:#07111e;color:var(--txt);border:1px solid #29415e;border-radius:10px;padding:11px 12px;outline:none}.field textarea{min-height:110px;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--cyan)}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.status{padding:10px 12px;border-radius:10px;background:#10243a;color:#b9d9f5;margin:12px 0}.status.error{background:#351522;color:#ffb6c2}.status.ok{background:#102d28;color:#9df1d3}.item{border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0;background:#091523}.item-head{display:flex;justify-content:space-between;align-items:center;gap:10px}.check{display:flex;align-items:center;gap:9px;margin:10px 0;color:var(--muted)}.check input{width:auto}.small{font-size:12px}.preview{display:flex;gap:12px;align-items:center;margin:10px 0}.preview img{width:72px;height:72px;object-fit:cover;border-radius:10px;border:1px solid var(--line)}.tabs-title{font-size:22px;margin:0 0 6px}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.footer{margin:20px 0;color:var(--muted);font-size:12px}
+@media(max-width:760px){.wrap{padding:14px}.grid{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.side button{text-align:center;padding:9px 6px}.row{grid-template-columns:1fr}.top{align-items:flex-start}}
+@media(max-width:520px){.wrap{padding:10px}.panel{padding:14px}.top{flex-wrap:wrap}.brand{font-size:12px}.toolbar{align-items:stretch}.toolbar .actions{width:100%}.toolbar .actions button{flex:1 1 100%}.side{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.side button{font-size:12px;min-width:0;overflow-wrap:anywhere}.item-head{align-items:flex-start}.item-head>div{flex-wrap:wrap}}
+@media(max-width:760px){
+ html,body{max-width:100%;overflow-x:hidden}
+ .wrap,.panel,.grid,.content,.side{min-width:0;max-width:100%}
+ .side{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .side button{white-space:normal;overflow-wrap:anywhere}
+ .field input,.field textarea,.field select{min-width:0;max-width:100%}
+ .item{min-width:0;overflow-wrap:anywhere}
+ .preview{min-width:0;flex-wrap:wrap}
+}
+@media(max-width:380px){.side{grid-template-columns:1fr}.toolbar .actions button{min-width:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand">AFRAN <span>ADMIN</span> <small class="muted">/ V3 CMS</small></div><div id="topActions" class="hidden"><span id="ownerEmail" class="muted small"></span> <button id="logoutBtn">Sign out</button></div></header>
+  <section id="loginView" class="panel login">
+    <h1>Owner sign in</h1><p class="muted">Private control panel for AFRAN TAMIM Portfolio V3.</p>
+    <form id="loginForm">
+      <div class="field"><label>Email</label><input id="email" type="email" autocomplete="username" required></div>
+      <div class="field"><label>Password</label><input id="password" type="password" autocomplete="current-password" required></div>
+      <button class="primary" type="submit">Secure login</button>
+    </form><div id="loginStatus" class="status hidden"></div>
+    <p class="muted small">Owner accounts are created manually in Supabase Authentication. Public sign-up is intentionally disabled.</p>
+  </section>
+  <section id="appView" class="hidden">
+    <div class="toolbar panel" style="margin-bottom:18px"><div><strong>Website control center</strong><div class="muted small">Draft changes are private until published.</div></div><div class="actions" style="margin:0"><button id="previewBtn">Preview public site</button><button id="saveBtn">Save draft</button><button id="publishBtn" class="primary">Publish changes</button></div></div>
+    <div class="grid">
+      <nav class="side panel" id="tabs">
+        <button class="active" data-tab="profile">Profile & contact</button>
+        <button data-tab="projects">Projects & videos</button>
+        <button data-tab="gaming">Gaming / Free Fire</button>
+        <button data-tab="anime">Anime & Story</button>
+        <button data-tab="apps">Apps & links</button>
+        <button data-tab="friends">Friend Circle</button>
+        <button data-tab="skills">Skills & services</button>
+        <button data-tab="tools">Creative toolkit</button>
+        <button data-tab="gemini">Gemini AI</button>
+        <button data-tab="appearance">Appearance & effects</button>
+        <button data-tab="sections">Sections & navigation</button>
+      </nav>
+      <main class="content panel">
+        <div id="status" class="status hidden"></div>
+        <section class="tab" id="tab-profile"><h2 class="tabs-title">Profile & contact</h2><p class="muted">Edit the text and social links shown on the public portfolio.</p>
+          <div class="row"><div class="field"><label>Display name</label><input data-path="profile.name"></div><div class="field"><label>Professional title</label><input data-path="profile.title"></div></div>
+          <div class="field"><label>Biography</label><textarea data-path="profile.bio"></textarea></div>
+          <div class="row"><div class="field"><label>Email</label><input data-path="contact.email" type="email"></div><div class="field"><label>Facebook URL</label><input data-path="contact.facebook"></div></div>
+          <div class="row"><div class="field"><label>YouTube URL</label><input data-path="contact.youtube"></div><div class="field"><label>YouTube channel name</label><input data-path="contact.youtubeName"></div></div>
+          <div class="field"><label>Portrait image</label><input type="file" accept="image/*" data-upload="profile.portrait"><div class="preview" id="portraitPreview"></div></div>
+          <div class="field"><label>ID card image (optional; defaults to portrait)</label><input type="file" accept="image/*" data-upload="profile.idPortrait"></div>
+          <div class="field"><label>Featured showcase video (upload your video here)</label><input type="file" accept="video/mp4,video/webm" data-upload="profile.featuredVideo"><small class="muted">Upload to Supabase Storage, then Save draft and Publish. Large files use resumable upload.</small></div>
+        </section>
+        <section class="tab hidden" id="tab-projects"><h2 class="tabs-title">Projects & video portfolio</h2><p class="muted">Add real work only. Uploaded media is stored in your private project bucket (public read, owner-only write).</p><div id="projectsList"></div><button id="addProject">+ Add project</button></section>
+        <section class="tab hidden" id="tab-gaming"><h2 class="tabs-title">Gaming & Free Fire</h2><p class="muted">Add gaming videos, screenshots, descriptions and external links.</p><div id="gamingList"></div><button id="addGaming">+ Add gaming content</button></section>
+        <section class="tab hidden" id="tab-anime"><h2 class="tabs-title">Anime & Story</h2><p class="muted">Add your own screenshots, artwork, reviews and related links. Do not upload full copyrighted episodes.</p><div id="animeList"></div><button id="addAnime">+ Add anime/story item</button></section>
+        <section class="tab hidden" id="tab-apps"><h2 class="tabs-title">Apps & useful links</h2><p class="muted">Add services, apps and links to display on the public website.</p><div id="appsList"></div><button id="addApp">+ Add app/link</button></section>
+        <section class="tab hidden" id="tab-friends"><h2 class="tabs-title">Friend Circle</h2><p class="muted">The three named friends are prefilled. Add the real profile images when ready.</p><div id="friendsList"></div><button id="addFriend" type="button">+ Add friend</button></section>
+        <section class="tab hidden" id="tab-skills"><h2 class="tabs-title">Skills & services</h2><div id="skillsList"></div><button id="addSkill">+ Add skill/service</button></section>
+        <section class="tab hidden" id="tab-tools"><h2 class="tabs-title">Creative toolkit</h2><p class="muted">Only list software you actually use.</p><div id="toolsList"></div><button id="addTool">+ Add tool</button></section>
+        <section class="tab hidden" id="tab-gemini">
+          <h2 class="tabs-title">Gemini AI Assistant</h2>
+          <p class="muted">Private owner-only AI assistant powered by Google Gemini through a secured Supabase Edge Function. Your Gemini API key is stored as a Supabase secret and is never sent to this browser.</p>
+          <div class="row">
+            <div class="field"><label for="geminiModel">Gemini model</label>
+              <select id="geminiModel">
+                <option value="gemini-3.8-flash">Gemini 3.8 Flash — recommended</option>
+                <option value="gemini-3.7-flash">Gemini 3.7 Flash</option>
+                <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
+              </select>
+            </div>
+            <div class="field"><label>Connection security</label><input value="Supabase Edge Function · Owner authentication" readonly></div>
+          </div>
+          <div class="field"><label for="geminiPrompt">Your message</label><textarea id="geminiPrompt" maxlength="6000" placeholder="Ask Gemini for help with your portfolio, content, ideas, or troubleshooting…"></textarea></div>
+          <div class="actions">
+            <button class="primary" id="geminiAskBtn" type="button">Ask Gemini ↗</button>
+            <button id="geminiClearBtn" type="button">Clear conversation</button>
+          </div>
+          <div id="geminiStatus" class="status hidden" aria-live="polite"></div>
+          <div class="item" id="geminiReplyWrap"><strong>Gemini response</strong><p id="geminiReply" class="muted" style="white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:0">Your response will appear here.</p></div>
+          <p class="muted small">This assistant does not automatically edit or publish your website. Review any suggested changes before applying them.</p>
+        </section>
+        <section class="tab hidden" id="tab-appearance"><h2 class="tabs-title">Appearance & effects</h2>
+          <div class="row"><div class="field"><label>Accent color</label><input type="color" data-path="appearance.accent"></div><div class="field"><label>Secondary glow</label><input type="color" data-path="appearance.glow"></div></div>
+          <label class="check"><input type="checkbox" data-path="appearance.animations"> Enable motion and scroll effects</label>
+          <label class="check"><input type="checkbox" data-path="appearance.doomEnabled"> Enable DOOM-inspired portrait effect</label>
+          <div class="field"><label>DOOM visual overlay asset (optional)</label><input type="file" accept="image/*" data-upload="appearance.doomAsset"></div>
+          <label class="check"><input type="checkbox" data-path="appearance.particles"> Enable background particles</label>
+          <label class="check"><input type="checkbox" data-path="appearance.glitch"> Enable global glitch effect</label>
+        </section>
+        <section class="tab hidden" id="tab-sections"><h2 class="tabs-title">Sections & navigation</h2><p class="muted">Toggle visibility and reorder the public sections.</p><div id="sectionsList"></div></section>
+      </main>
+    </div>
+    <p class="footer">AFRAN ADMIN • Changes are saved to Supabase. Publishing updates the public website content endpoint.</p>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/tus-js-client@4/dist/tus.min.js"></script>
+<script src="config.js"></script><script src="cms.js"></script>
+</body></html>

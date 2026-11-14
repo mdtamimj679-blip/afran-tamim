@@ -1,0 +1,23 @@
+AFRAN TAMIM PORTFOLIO — CONTROL PANEL / RESPONSIVE PATCH
+Updated: 2026-11-14
+
+Implemented in this package
+- CMS list mutations now re-render only the affected list. Adding or deleting a Friend no longer rebuilds unrelated Project, Gaming, Anime, Apps, Skills, Tools, or Sections controls.
+- Each Friend image picker has its own preview and stores its result on that Friend record. Friend uploads use unique object names under the friends/ storage prefix.
+- Existing Khalid Bin Oalid Sam records are preserved; if the saved draft lacks this member, the supplied profile record is added. Missing seeded friend image URLs are restored without overwriting existing custom URLs.
+- Save/Publish are guarded while uploads are in progress. Save and Publish operate on snapshots, and edits made during a network save remain marked unsaved.
+- The Supabase client uses a fetch adapter that percent-encodes non-Latin-1 Unicode header metadata before passing headers to native fetch. Login email is trimmed and unsupported Unicode email addresses are reported clearly.
+- Mobile navigation and admin sidebar have viewport-width/overflow safeguards. Desktop navigation styling is retained.
+- The global glitch keeps its original keyframes and duration; the flash is slightly more visible and occurs a little more frequently. No other animation definitions or timing values were changed.
+
+Static verification performed
+- Node syntax checks passed for cms.js, public-cms.js, workers/gemini-worker.js and the inline JavaScript in index.html.
+- All bundled image assets passed image-file verification.
+- Khalid Bin Oalid Sam image remains included at assets/friends/khalid-bin-oalid-sam.jpg.
+
+Live tests that remain necessary
+- config.js in the supplied archive contains template placeholders, not the site's real Supabase Project URL, anon/publishable key, or Worker URL. The live Auth request, database permissions/RLS, Storage upload, Save Draft and Publish endpoints cannot be tested without the owner's configured project.
+- No live browser session or owner credentials were available, so mobile/desktop visual rendering and actual login/upload/publish flows were not end-to-end tested. The project passed static syntax and asset checks only.
+- Before deploying, restore the real public Supabase URL and anon/publishable key in config.js. Never place a service_role key in browser code.
+- Review supabase/schema.sql against the live project and back up the database before applying any SQL. Do not blindly re-run backend migrations/policies.
+- The large showcase MP4 is not included in the supplied archive; upload it after Supabase Storage is configured.
