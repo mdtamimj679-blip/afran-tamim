@@ -1,5 +1,5 @@
-// Public settings only. Use the Supabase anon/publishable key, never service_role.
+
 window.AFRAN_CMS_CONFIG = {
-  SUPABASE_URL: "https://YOUR-PROJECT.supabase.co",
-  SUPABASE_ANON_KEY: "YOUR_SUPABASE_ANON_OR_PUBLISHABLE_KEY"
+  SUPABASE_URL: "https://jizkievobaeaquafabxj.supabase.co",
+  SUPABASE_ANON_KEY: "sb_publishable_1r-RKsEq96ACfH_3RYr-7g_W8Jv7AqR"
 };
