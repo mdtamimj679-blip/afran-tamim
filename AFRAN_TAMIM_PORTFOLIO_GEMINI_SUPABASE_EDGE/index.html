@@ -132,13 +132,13 @@ body.global-glitch #globalGlitch:after{opacity:.65;animation:globalGlitchSlice2 
 }
 /* Mobile nav fit safeguards end. */
 
-/* Mobile responsive hardening: preserve the existing visual design while preventing viewport overflow. */
-html,body{max-width:100%;overflow-x:clip}
+/* Mobile responsive hardening: preserve the original desktop widths and prevent narrow-screen overflow. */
+html,body{overflow-x:clip}
 body{min-width:0}
-main,section,footer,.hero,.hero-visual,.section-head,.about-grid,.project-grid,.skills-grid,.interest-grid,.contact-grid,.friend-grid,.video-showcase{min-width:0;max-width:100%}
+main,section,footer,.hero,.hero-visual,.section-head,.about-grid,.project-grid,.skills-grid,.interest-grid,.contact-grid,.friend-grid,.video-showcase{min-width:0}
 img,video,canvas,svg{max-width:100%}
 @media(max-width:600px){
-  section{width:100%;min-width:0}
+  section{width:100%;max-width:100%;min-width:0}
   .hero{width:100%;grid-template-columns:minmax(0,1fr)}
   .hero>*{min-width:0}
   .hero-visual{width:100%;max-width:100%;min-width:0}
